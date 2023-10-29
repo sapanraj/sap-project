@@ -1,4 +1,7 @@
 import http.client
+import requests
 
 connection = http.client.HTTPConnection('www.python.org', 80, timeout=10)
+response = requests.get('https://www.python.org')
 print(connection)
+print(response.status_code)
